@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,6 +32,7 @@ public class PersonController {
 
     // value are the means to reach the index page
     @RequestMapping(value={"/","/home","/index"}, method=RequestMethod.GET)
+    // @GetMapping(value={"/","index"})
     public String index(Model model) {
         // Message comes from global variable from application.properties
         model.addAttribute("message", message); 
@@ -59,6 +61,7 @@ public class PersonController {
         return "addPerson";
     }
 
+    // POST feature likely data comes from a form
     @RequestMapping(value = "/addPerson", method = RequestMethod.POST)
         public String savePerson(Model model, 
         @ModelAttribute("personForm") PersonForm personForm) {
