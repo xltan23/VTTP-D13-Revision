@@ -29,6 +29,7 @@ public class D13revisionApplication {
 		app.run(args);
 	}
 
+	// Any bug will be logged
 	@Bean
 	public CommonsRequestLoggingFilter log() {
 		CommonsRequestLoggingFilter logger = new CommonsRequestLoggingFilter();
