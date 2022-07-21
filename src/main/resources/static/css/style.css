@@ -1,0 +1,15 @@
+h1 {
+    color: firebrick;
+}
+
+h2 {
+    color: lightsteelblue;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 5px;
+}
